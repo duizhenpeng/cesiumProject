@@ -1,4 +1,7 @@
  var fixGltf = function(gltf) {
+   if( !gltf.extensionsUsed ){
+          return;
+         }
     var v = gltf.extensionsUsed.indexOf('KHR_technique_webgl');
     if( v >= 0 ){
       var t = gltf.extensionsRequired.indexOf('KHR_technique_webgl');
